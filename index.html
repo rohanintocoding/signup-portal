@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Slabo+27px&display=swap" rel="stylesheet">
+    <title>Signup Portal</title>
+</head>
+
+<body>
+    <div class="main">
+        <form name="myform">
+            <div class="name">
+                <p>
+                    <label for="urname">Full Name:</label>
+                </p>
+                <div class="nameclass">
+
+                    <input type="text" class="input" name="urname" id="urname" placeholder="First Name" required>
+                    <input type="text" class="input" name="Lname" id="Lname" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="contact">
+                <div class="mail">
+
+                    <p>
+                        <label for="mymail">Email ID:</label>
+                    </p>
+                    <input class="input" type="email" name="mymail" id="mymail" required>
+                </div>
+                <div class="num">
+
+                    <p><label for="mobile">Contact No:</label></p>
+                    <input class="input" type="tel" name="mobile" id="mobile" required pattern="[6789]{1}[0-9]{9}"
+                        placeholder="9999-999-999">
+                </div>
+            </div>
+            <p id="error-contact"></p>
+            <div class="bday">
+                <p><label for="DOB">Date Of Birth</label></p>
+                <input class="select" type="date" name="DOB" id="DOB" required>
+            </div>
+            <div class="gender">
+                <p>
+
+                    <label for="gender">Gender:</label>
+                </p>
+                <input type="radio" name="gender" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">Female</label>
+            </div>
+            <div class="degree">
+
+                <select class="select" name="select-program" id="select-program" required>
+
+                    <option value="1">Select Course</option>
+                    <option value="2">Frponend Development</option>
+                    <option value="3">Backend Development</option>
+                    <option value="4">Full Stack Development</option>
+                    <option value="5">Android Development</option>
+                    <option value="6">Machine Learning</opplaceholder <option value="7">Data Science</option>
+                    <option value="8">Cyber Security</option>
+                </select>
+
+            </div>
+            <div class="parent">
+                <p><label for="pname">Parent/Gaurdian Name</label></p>
+                <div class="parentname">
+
+                    <input class="input" type="text" name="pname" id="pname" placeholder="First Name" required>
+                    <input class="input" type="text" name="plname" id="plname" placeholder="Last Name" required>
+                </div>
+
+            </div>
+            <div class="p   contact">
+                <p><label for="pcon">Parent/Gaurdian Contact No.</label></p>
+                <input class="input" type="tel" name="pcon" id="pcon" required placeholder="9999-999-999">
+            </div>
+            <div class="address">
+                <p><label for="state">Address:</label></p>
+                <div class="container-add">
+                    <div class="state">
+
+                        <select class="select" id="countrySelect" size="1" onchange="makeSubmenu(this.value)">
+                            <option value="" disabled selected>Choose State</option>
+                            <option>Odisha</option>
+                            <option>Maharashtra</option>
+                            <option>Kerala</option>
+                        </select>
+                    </div>
+                    <div class="city">
+                        <select class="select" id="citySelect" size="1">
+                            <option value="" disabled selected>Choose City</option>
+                            <option></option>
+                        </select>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="remaining-add">
+
+                <div class="pin">
+                    <p><label for="pin">Postal/Area code:</label></p>
+                    <input class="input" type="text" name="pin" id="pin" required pattern="[0-9]{7}"
+                        placeholder="4000000">
+                </div>
+                <div class="street">
+                    <p><label for="street">Street,Building:</label></p>
+                    <input class="input" type="text" name="street" id="street" required>
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+                <label for="checkbox">I have read All the Terms And Conditions</label>
+            </div>
+            <div class="btn">
+                <input class="button" type="submit" value="Submit ">
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
